@@ -1,0 +1,624 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+.header{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header.sticky {
+  border-bottom: 0.1rem solid rgba(247, 6, 6, 0.2);
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for sticky header */
+}
+.logo {
+  font-size: 2rem;
+}
+span {
+  color: red;
+}
+.navbar a{
+  font-size: 1.7rem;
+  color: #000000;
+  margin-left: 4rem;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color:rgb(0, 135, 239);
+}
+
+#menu-icon{
+  font-size: 3.6rem;
+  color: black;
+  display: none;
+
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.social-media a:hover{
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex; /* Align buttons in a row */
+  justify-content: center; /* Center align buttons */
+  gap: 20px; /* Add space between buttons */
+  margin-top: 20px; /* Add space above the container */
+}
+
+.btn {
+  padding: 10px 20px; /* Add spacing inside the buttons */
+  font-size: 16px; /* Set a readable font size */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Show pointer on hover */
+  text-align: center; /* Center the text inside the button */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-decoration: none; /* Remove text underline */
+}
+
+.btn-color-1 {
+  background-color: #007bff; /* Button color for Contact Info */
+}
+
+.btn-color-1:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-color-2 {
+  background-color: #28a745; /* Button color for Download CV */
+}
+
+.btn-color-2:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  padding: 50px 20px;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* skills SECTION */
+#skills {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section__text__p1 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-box {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  word-wrap: break-word; /* Ensures text wraps within the container */
+  overflow: hidden;      /* Prevents any text from spilling outside */
+}
+
+
+.skill-box:hover {
+  background-color: #007bff; /* Highlight color */
+  color: white;
+  border-color: #0056b3;
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+.skill-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  white-space: normal; /* Allows wrapping of long text */
+  word-break: break-word; /* Breaks long words if needed */
+}
+
+.skill-box p {
+  font-size: 1rem;
+  color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipsis if the text is too long */
+  white-space: normal; /* Ensures multiline display */
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.icon.arrow {
+  margin-top: 30px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  padding: 50px 20px;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+/*add*/ 
+
+/* CERTIFICATE SECTION */
+
+#certificate {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.certificates-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.certificates-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 certificates per row */
+  gap: 5rem; /* Space between certificates */
+  justify-content: center;
+}
+
+.certificate-item {
+  text-align: center;
+  max-width: 250px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.certificate {
+  width: 120%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Zoom-Out Animation */
+.certificate:hover {
+  transform: scale(1.8);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Certificate Name Styling */
+.certificate-name {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Styling for the Section Title */
+.section-title {
+  font-size: 2.5rem; /* Adjust size for prominence */
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333; /* Neutral color for better readability */
+  font-weight: bold;
+  text-transform:capitalize; /* Optional for styling */
+  letter-spacing: 0.1rem; /* Optional spacing for a clean look */
+}
+
+
+/* Responsive Design: Stack for smaller screens */
+@media (max-width: 768px) {
+  .certificates-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-container {
+    grid-template-columns: 1fr; /* 1 per row on small screens */
+  }
+}
+@media(max-width: 1200px){
+  html{
+    font-size: 55%;
+  }
+}
+@media(max-width: 991px){
+  .header{
+    padding: 2rem 3%;
+  }
+}
+
+
+#role-text {
+  font-weight: bold;
+  color: #f81010; /* Customize text color */
+  font-size: 1.7rem;
+  border-right: 2px solid #007bff; /* Add blinking cursor */
+  animation: blink 0.7s step-end infinite;
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+section{
+  padding: 10rem 5% 2rem;
+}
+.footer{
+  padding: 2rem 3%;
+}
